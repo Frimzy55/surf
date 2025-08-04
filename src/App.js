@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './Navbar';
+import Hello from './Hello';
+import Contact from "./Contact";
+import OurStory from "./OurStory";
+import Footer from "./Footer";
+import Yoga from "./Yoga";
+import YogaWithSerap from "./YogaWithSerap";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Home Page */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Hello />
+              <OurStory /> {/* Our Story Section */}
+              <Yoga />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* Yoga with Serap Page */}
+        <Route
+          path="/yoga-with-serap"
+          element={
+            <>
+              
+              <YogaWithSerap />
+              
+            </>
+             
+          }
+        />
+         
+      </Routes>
+    </Router>
+     
   );
 }
 

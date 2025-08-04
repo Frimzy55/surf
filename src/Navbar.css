@@ -1,0 +1,115 @@
+/* Default hidden state for dropdowns */
+.navbar .dropdown-menu {
+  display: none; /* Let Bootstrap control visibility */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease-in-out;
+}
+
+/* Desktop hover animation */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* Make dropdown toggle look like normal nav links */
+.navbar .dropdown-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  background: none !important;
+  border: none !important;
+}
+
+/* Mobile styles */
+@media (max-width: 991px) {
+  /* Let Bootstrap handle showing dropdown on click */
+  .navbar-nav .dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+    width: 100%;
+    margin-top: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .navbar-nav .dropdown-item {
+    padding-left: 2rem; /* Indent for clarity */
+  }
+}
+
+
+
+
+/* Navbar background and link styles */
+.navbar {
+  background-color: #111 !important;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffb400 !important; /* gold highlight */
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+  background-color: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  opacity: 0;
+  transform: translateY(10px);
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Show dropdown smoothly */
+.dropdown.show .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Dropdown items */
+.dropdown-menu .dropdown-item {
+  color: #fff;
+  font-weight: 500;
+  padding: 10px 20px;
+  transition: background 0.3s ease, padding-left 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #ffb400;
+  color: #111;
+  padding-left: 25px; /* small slide effect */
+}
+
+/* Mobile toggle animation */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}

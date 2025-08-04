@@ -1,0 +1,80 @@
+.yoga-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8f9fa, #ffe9b3);
+}
+
+.yoga-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.yoga-description {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+/* Image grid */
+.yoga-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* CRAZY ENTRY + FLOATING WAVE EFFECT */
+.yoga-images img {
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+  /* Entry animation */
+  animation: crazyEntry 1.2s ease forwards,
+             floatWave 6s ease-in-out infinite; /* continuous floating */
+
+  animation-delay: calc(var(--i) * 0.25s), calc(var(--i) * 0.25s + 1.2s);
+  opacity: 0;
+  transform: scale(0.8) rotate(-10deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover crazy effect */
+.yoga-images img:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+  filter: brightness(1.1);
+}
+
+/* Entry animation keyframes */
+@keyframes crazyEntry {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.6) rotate(-15deg);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1.05) rotate(5deg);
+  }
+  70% {
+    transform: translateY(10px) scale(0.95) rotate(-3deg);
+  }
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Continuous floating effect */
+@keyframes floatWave {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  25% { transform: translateY(-10px) rotate(1deg) scale(1.02); }
+  50% { transform: translateY(0) rotate(0deg) scale(1); }
+  75% { transform: translateY(10px) rotate(-1deg) scale(0.98); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
