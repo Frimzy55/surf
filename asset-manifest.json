@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/surf/static/css/main.3fc9c594.css",
+    "main.js": "/surf/static/js/main.1ff20f3c.js",
+    "static/js/453.1a16ed4e.chunk.js": "/surf/static/js/453.1a16ed4e.chunk.js",
+    "static/media/surflogo1.png": "/surf/static/media/surflogo1.4688275746e6a1432261.png",
+    "static/media/image2.jpeg": "/surf/static/media/image2.658dbc407d0bdc3b8fdb.jpeg",
+    "static/media/yoga1.jpeg": "/surf/static/media/yoga1.91c82c3c8c99af0171a2.jpeg",
+    "static/media/yoga3.jpeg": "/surf/static/media/yoga3.7b9488576b5f33d45165.jpeg",
+    "static/media/image7.jpeg": "/surf/static/media/image7.4c7a9796b5375ffef2f3.jpeg",
+    "static/media/image1.jpeg": "/surf/static/media/image1.a6511481cfe62e997c07.jpeg",
+    "static/media/image3.jpeg": "/surf/static/media/image3.09036041827fcab40dba.jpeg",
+    "static/media/yoga2.jpeg": "/surf/static/media/yoga2.83f13dc77e70f391d935.jpeg",
+    "static/media/image6.jpg": "/surf/static/media/image6.e6ce53ab7e0f2fc53118.jpg",
+    "static/media/image4.jpeg": "/surf/static/media/image4.6f7c613f5708f0fc7b99.jpeg",
+    "index.html": "/surf/index.html",
+    "main.3fc9c594.css.map": "/surf/static/css/main.3fc9c594.css.map",
+    "main.1ff20f3c.js.map": "/surf/static/js/main.1ff20f3c.js.map",
+    "453.1a16ed4e.chunk.js.map": "/surf/static/js/453.1a16ed4e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3fc9c594.css",
+    "static/js/main.1ff20f3c.js"
+  ]
+}
