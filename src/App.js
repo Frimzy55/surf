@@ -10,7 +10,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
+    // 👇 Add basename with your GitHub repo name
+    <Router basename="/surf">  
       <Routes>
         {/* Home Page */}
         <Route
@@ -32,17 +33,12 @@ function App() {
           path="/yoga-with-serap"
           element={
             <>
-              
               <YogaWithSerap />
-              
             </>
-             
           }
         />
-         
       </Routes>
     </Router>
-     
   );
 }
 
