@@ -87,151 +87,49 @@ Whether you're a beginner looking to catch your first wave or an experienced sur
               expandedMember === "Evans Abban" ? (
                 <>
                   {/* Bio Section */}
-                  <div
-                    style={{
-                      background: "#f0faff",
-                      padding: "15px",
-                      borderRadius: "10px",
-                      textAlign: "left",
-                      marginBottom: "15px",
-                      borderLeft: "5px solid #4da3ff"
-                    }}
-                  >
-                    <h5 style={{ color: "#4da3ff", fontWeight: "bold" }}>
+                  <div className="info-section">
+                    <h5 className="info-title">
                       A Certified Surf Instructor and Life Guard with over seven (7) years of surfing experience
                     </h5>
-                    <p
-                      style={{
-                        fontSize: "0.9rem",
-                        color: "#555",
-                        whiteSpace: "pre-line",
-                        marginTop: "10px"
-                      }}
-                    >
-                      {member.bio}
-                    </p>
+                    <p className="info-text">{member.bio}</p>
                   </div>
 
                   {/* Teaching Style Section */}
-                  <div
-                    style={{
-                      background: "#f0faff",
-                      padding: "15px",
-                      borderRadius: "10px",
-                      marginBottom: "15px",
-                      borderLeft: "5px solid #4da3ff",
-                      display: "flex",
-                      flexWrap: "wrap",
-                      alignItems: "center",
-                      gap: "20px"
-                    }}
-                  >
+                  <div className="teaching-style">
                     <img
                       src={surfTeachingImg}
                       alt="Loshe teaching surf lessons"
-                      style={{
-                        flex: "1 1 250px",
-                        borderRadius: "10px",
-                        objectFit: "cover",
-                        maxWidth: "400px"
-                      }}
                     />
-                    <div style={{ flex: "2 1 300px" }}>
-                      <h5 style={{ color: "#4da3ff", fontWeight: "bold" }}>
+                    <div>
+                      <h5 className="info-title">
                         Loshe's Surf Teaching Style & Expertise
                       </h5>
-                      <p
-                        style={{
-                          fontSize: "0.9rem",
-                          color: "#555",
-                          whiteSpace: "pre-line",
-                          marginTop: "10px"
-                        }}
-                      >
-                        {member.teachingStyle}
-                      </p>
+                      <p className="info-text">{member.teachingStyle}</p>
                     </div>
                   </div>
 
                   {/* Accreditation Section */}
-                  <div
-                    style={{
-                      background: "#f0faff",
-                      padding: "15px",
-                      borderRadius: "10px",
-                      marginBottom: "15px",
-                      borderLeft: "5px solid #4da3ff",
-                      display: "flex",
-                      flexWrap: "wrap",
-                      alignItems: "center",
-                      gap: "20px"
-                    }}
-                  >
+                  <div className="teaching-style">
                     <img
                       src={accreditationImg}
                       alt="Evans Abban ISA Certification"
-                      style={{
-                        flex: "1 1 250px",
-                        borderRadius: "10px",
-                        objectFit: "cover",
-                        maxWidth: "400px"
-                      }}
                     />
-                    <div style={{ flex: "2 1 300px" }}>
-                      <h5 style={{ color: "#4da3ff", fontWeight: "bold" }}>
-                        Professional Accreditation
-                      </h5>
-                      <p
-                        style={{
-                          fontSize: "0.9rem",
-                          color: "#555",
-                          whiteSpace: "pre-line",
-                          marginTop: "10px"
-                        }}
-                      >
-                        {member.accreditation}
-                      </p>
+                    <div>
+                      <h5 className="info-title">Professional Accreditation</h5>
+                      <p className="info-text">{member.accreditation}</p>
                     </div>
                   </div>
 
                   {/* Book button */}
-                  <button
-                    style={{
-                      backgroundColor: "#4da3ff",
-                      color: "#fff",
-                      padding: "10px 20px",
-                      border: "none",
-                      borderRadius: "8px",
-                      cursor: "pointer",
-                      fontWeight: "bold"
-                    }}
-                  >
+                  <button className="book-btn">
                     Book a Session with Me →
                   </button>
                 </>
               ) : (
                 <>
-                  <p
-                    style={{
-                      fontSize: "0.9rem",
-                      color: "#555",
-                      textAlign: "left",
-                      marginBottom: "10px"
-                    }}
-                  >
-                    {member.shortDesc}
-                  </p>
+                  <p className="short-text">{member.shortDesc}</p>
                   <button
-                    style={{
-                      background: "transparent",
-                      color: "#4da3ff",
-                      border: "1px solid #4da3ff",
-                      padding: "5px 12px",
-                      borderRadius: "6px",
-                      fontSize: "0.85rem",
-                      fontWeight: "bold",
-                      cursor: "pointer"
-                    }}
+                    className="read-more-btn"
                     onClick={() => {
                       setShowAll(true);
                       setExpandedMember("Evans Abban");
@@ -253,16 +151,7 @@ Whether you're a beginner looking to catch your first wave or an experienced sur
                 setShowAll(false);
                 setExpandedMember(null);
               }}
-              style={{
-                backgroundColor: "#4da3ff",
-                color: "#fff",
-                border: "none",
-                padding: "10px 20px",
-                borderRadius: "8px",
-                cursor: "pointer",
-                fontSize: "0.9rem",
-                fontWeight: "bold"
-              }}
+              className="collapse-btn"
             >
               Show Less
             </button>

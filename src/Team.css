@@ -11,13 +11,88 @@
 
 
 
-@media (min-width: 768px) {
-  .teaching-style {
-    flex-direction: row !important;
-    align-items: center;
-  }
+.info-section {
+  background: #f0faff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  margin-bottom: 15px;
+  border-left: 5px solid #4da3ff;
+}
 
-  .teaching-style img {
-    max-width: 50%;
+.info-title {
+  color: #4da3ff;
+  font-weight: bold;
+}
+
+.info-text {
+  font-size: 0.9rem;
+  color: #555;
+  white-space: pre-line;
+  margin-top: 10px;
+}
+
+.teaching-style {
+  background: #f0faff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border-left: 5px solid #4da3ff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.teaching-style img {
+  flex: 1 1 250px;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.short-text {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.read-more-btn {
+  background: transparent;
+  color: #4da3ff;
+  border: 1px solid #4da3ff;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.book-btn {
+  background-color: #4da3ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.collapse-btn {
+  background-color: #4da3ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .teaching-style {
+    flex-direction: column;
   }
 }
