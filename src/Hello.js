@@ -6,11 +6,11 @@ import SurfHeading from "./SurfHeading"; // <-- New import
 
 // Import your background images
 import img1 from "./assets/image1.jpeg";
-import img2 from "./assets/image2.jpeg";
+//import img2 from "./assets/image2.jpeg";
 import img3 from "./assets/image3.jpeg";
 import img4 from "./assets/image4.jpeg";
-import img6 from "./assets/image6.jpg";
-import img7 from "./assets/image7.jpeg";
+//import bb from "./assets/img1.jpg";
+import img7 from "./assets/image11.jpeg";
 
 // Import new sections
 import WhySurfing from "./WhySurfing";
@@ -18,7 +18,7 @@ import BeginnerLessons from "./BeginnerLessons";
 import EquipmentInfo from "./EquipmentInfo";
 
 function Hello() {
-  const images = [img1, img2, img3, img4, img6,img7];
+  const images = [img1, img3, img4,img7];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Slideshow change every 4 seconds

@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Navbar';
 import Hello from './Hello';
 import Contact from "./Contact";
@@ -6,12 +6,17 @@ import OurStory from "./OurStory";
 import Footer from "./Footer";
 import Yoga from "./Yoga";
 import YogaWithSerap from "./YogaWithSerap";
+import Rentals from "./Rentals";
+import RentalPrices from "./RentalPrices"; // ✅ Import new page
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Tour from './Tour';
+import Team from './Team';
+
 
 function App() {
   return (
-    // 👇 Add basename with your GitHub repo name
-    <Router basename="/surf">  
+    // ✅ For GitHub Pages, use basename
+    <Router basename="/surf">
       <Routes>
         {/* Home Page */}
         <Route
@@ -20,8 +25,12 @@ function App() {
             <>
               <Navbar />
               <Hello />
-              <OurStory /> {/* Our Story Section */}
+              <OurStory />
+              
+              <Rentals />
+              <Tour/>
               <Yoga />
+              <Team/>
               <Contact />
               <Footer />
             </>
@@ -31,11 +40,13 @@ function App() {
         {/* Yoga with Serap Page */}
         <Route
           path="/yoga-with-serap"
-          element={
-            <>
-              <YogaWithSerap />
-            </>
-          }
+          element={<YogaWithSerap />}
+        />
+
+        {/* ✅ Rental Prices Page */}
+        <Route
+          path="/rental-prices"
+          element={<RentalPrices />}
         />
       </Routes>
     </Router>

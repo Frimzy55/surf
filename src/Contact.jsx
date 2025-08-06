@@ -1,6 +1,6 @@
 // Contact.jsx
 import React from "react";
-import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaUsers } from "react-icons/fa";
+import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaClock } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -9,7 +9,6 @@ export default function Contact() {
       style={{
         padding: "60px 20px",
         background: "#f9f9f9",
-        minHeight: "60vh",
       }}
     >
       <div className="container">
@@ -19,68 +18,90 @@ export default function Contact() {
           We'd love to hear from you!
         </p>
 
-        {/* Contact Info */}
-        <div className="row text-center mb-5">
-          <div className="col-md-3 mb-4">
-            <FaMapMarkerAlt size={30} color="#ff9800" />
-            <h5 className="mt-2">Address</h5>
-            <p>Loshe's Surf School, Beach Road, Koforidua, Ghana</p>
+        <div className="row align-items-center">
+          {/* Contact Details */}
+          <div className="col-lg-6 mb-4">
+            <div className="row text-center mb-5">
+              <div className="col-md-6 mb-4">
+                <FaMapMarkerAlt size={30} color="#ff9800" />
+                <h5 className="mt-2">Address</h5>
+                <p>Cape 3 Point, Ecolodge, Western Region, Ghana</p>
+              </div>
+
+              <div className="col-md-6 mb-4">
+                <FaPhoneAlt size={30} color="#ff9800" />
+                <h5 className="mt-2">Phone</h5>
+                <p>(+233) 256749130</p>
+              </div>
+
+              <div className="col-md-6 mb-4">
+                <FaEnvelope size={30} color="#ff9800" />
+                <h5 className="mt-2">Email</h5>
+                <p>abbanevans100@gmail.com</p>
+              </div>
+
+              <div className="col-md-6 mb-4">
+                <FaClock size={30} color="#ff9800" />
+                <h5 className="mt-2">Hours</h5>
+                <p>Mon - Sun / 9:00 AM - 6:00 PM (GMT+)</p>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <form
+              style={{
+                maxWidth: "500px",
+                margin: "0 auto",
+                textAlign: "left",
+              }}
+            >
+              <div className="mb-3">
+                <label className="form-label fw-bold">Name</label>
+                <input type="text" className="form-control" placeholder="Your Name" />
+              </div>
+
+              <div className="mb-3">
+                <label className="form-label fw-bold">Email</label>
+                <input type="email" className="form-control" placeholder="Your Email" />
+              </div>
+
+              <div className="mb-3">
+                <label className="form-label fw-bold">Message</label>
+                <textarea
+                  className="form-control"
+                  rows="4"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className="btn btn-primary w-100"
+                style={{ backgroundColor: "#ff9800", border: "none" }}
+              >
+                Send Message
+              </button>
+            </form>
           </div>
 
-          <div className="col-md-3 mb-4">
-            <FaEnvelope size={30} color="#ff9800" />
-            <h5 className="mt-2">Email</h5>
-            <p>info@loshessurf.com</p>
-          </div>
-
-          <div className="col-md-3 mb-4">
-            <FaPhoneAlt size={30} color="#ff9800" />
-            <h5 className="mt-2">Phone</h5>
-            <p>+233 24 123 4567</p>
-          </div>
-
-          <div className="col-md-3 mb-4">
-            <FaUsers size={30} color="#ff9800" />
-            <h5 className="mt-2">Staff</h5>
-            <p>15 friendly surf coaches and guides</p>
+          {/* Google Map */}
+          <div className="col-lg-6">
+            <iframe
+              title="Cape 3 Points Ecolodge Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.3373648059114!2d-2.0918294258330886!3d4.747068741152465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfd8f44d2c2c8c9f%3A0x7eac8822b5c7711!2sEscape%203%20Points%20Ecolodge!5e0!3m2!1sen!2sgh!4v1690000000000!5m2!1sen!2sgh"
+              width="100%"
+              height="500"
+              style={{
+                border: 0,
+                borderRadius: "12px",
+                boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
+              }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
-
-        {/* Contact Form */}
-        <form
-          style={{
-            maxWidth: "500px",
-            margin: "0 auto",
-            textAlign: "left",
-          }}
-        >
-          <div className="mb-3">
-            <label className="form-label fw-bold">Name</label>
-            <input type="text" className="form-control" placeholder="Your Name" />
-          </div>
-
-          <div className="mb-3">
-            <label className="form-label fw-bold">Email</label>
-            <input type="email" className="form-control" placeholder="Your Email" />
-          </div>
-
-          <div className="mb-3">
-            <label className="form-label fw-bold">Message</label>
-            <textarea
-              className="form-control"
-              rows="4"
-              placeholder="Your Message"
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            className="btn btn-primary w-100"
-            style={{ backgroundColor: "#ff9800", border: "none" }}
-          >
-            Send Message
-          </button>
-        </form>
       </div>
     </section>
   );

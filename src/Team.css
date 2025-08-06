@@ -1,0 +1,23 @@
+@media (min-width: 768px) {
+  .teaching-style {
+    flex-direction: row !important; /* Side-by-side on desktop */
+    align-items: center;
+  }
+
+  .teaching-style img {
+    max-width: 50%; /* Half width for desktop */
+  }
+}
+
+
+
+@media (min-width: 768px) {
+  .teaching-style {
+    flex-direction: row !important;
+    align-items: center;
+  }
+
+  .teaching-style img {
+    max-width: 50%;
+  }
+}

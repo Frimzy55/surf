@@ -1,54 +1,91 @@
 // Yoga.jsx
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Yoga.css";
 
-// Import images from your local assets folder
+// Local images
 import yoga1 from "./assets/yoga1.jpeg";
 import yoga2 from "./assets/yoga2.jpeg";
 import yoga3 from "./assets/yoga3.jpeg";
+import yog from "./assets/yog.jpeg";
+import yoga from "./assets/yoga.jpeg";
 
 export default function Yoga() {
   const navigate = useNavigate();
 
-  const images = [
-    "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+  // All yoga images (local + online)
+  const allImages = [
+    
     "https://images.unsplash.com/photo-1517836357463-d25dfeac3438",
-    "https://images.unsplash.com/photo-1552058544-f2b08422138a",
+    yog,
     yoga1,
     yoga2,
-    yoga3
+    yoga3,
+    yoga
   ];
+
+  const [images, setImages] = useState(allImages);
+  const [fadeIndex, setFadeIndex] = useState(null); // Which image is fading
+  const [lightboxImage, setLightboxImage] = useState(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Pick a random index to change
+      const randomIndex = Math.floor(Math.random() * images.length);
+      setFadeIndex(randomIndex); // Start fade-out
+
+      // After fade-out, change the image
+      setTimeout(() => {
+        const newImage =
+          allImages[Math.floor(Math.random() * allImages.length)];
+        setImages((prev) =>
+          prev.map((img, idx) => (idx === randomIndex ? newImage : img))
+        );
+        setFadeIndex(null); // Start fade-in
+      }, 500); // Match fade-out time
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [0]);
 
   return (
     <section id="yoga" className="yoga-section">
       <div className="container text-center">
         <h2 className="yoga-title">Yoga by the Beach</h2>
         <p className="yoga-description">
-          Experience the perfect harmony of body, mind, and ocean. Our beach yoga
-          sessions combine gentle stretches, deep breathing, and the calming
-          sound of waves — perfect for surfers and non-surfers alike.
+          Experience the perfect harmony of body, mind, and ocean. Our beach
+          yoga sessions combine gentle stretches, deep breathing, and the
+          calming sound of waves — perfect for surfers and non-surfers alike.
         </p>
 
         <div className="yoga-images">
           {images.map((src, i) => (
-            <img key={i} src={src} alt={`Yoga ${i + 1}`} style={{ "--i": i }} />
+            <img
+              key={i}
+              src={src}
+              alt={`Yoga ${i + 1}`}
+              onClick={() => setLightboxImage(src)}
+              className={fadeIndex === i ? "fade-out" : "fade-in"}
+            />
           ))}
         </div>
 
-        {/* Primary booking button */}
-        <button className="btn btn-warning mt-4">
-          Book a Yoga Session
-        </button>
+        <button className="btn btn-warning mt-4">Book a Yoga Session</button>
 
-        {/* Secondary "Yoga with Serap" button */}
         <button
-  className="btn btn-outline-dark mt-3 ms-2"
-  onClick={() => navigate("/yoga-with-serap")}
->
-  Yoga with Serap
-</button>
+          className="btn btn-outline-dark mt-3 ms-2"
+          onClick={() => navigate("/yoga-with-serap")}
+        >
+          Yoga with Serap
+        </button>
       </div>
+
+      {/* Lightbox */}
+      {lightboxImage && (
+        <div className="lightbox" onClick={() => setLightboxImage(null)}>
+          <img src={lightboxImage} alt="Yoga large" />
+        </div>
+      )}
     </section>
   );
 }

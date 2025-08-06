@@ -38,7 +38,7 @@ export default function YogaWithSerap() {
       >
         {/* Back Arrow */}
         <button
-          onClick={() => navigate("/")}
+          onClick={() => navigate(-1)}
           style={{
             background: "none",
             border: "none",
@@ -76,7 +76,7 @@ export default function YogaWithSerap() {
 
         <p>
           I completed my 200-hour Yoga Teacher Training in Hawaii with the
-          renowned California-based teacher <strong>Shai Segre</strong>, where I
+          renowned California-based teacher Shai Segre, where I
           built a strong foundation in alignment, anatomy, and the art of holding
           space for transformation.
         </p>
@@ -92,20 +92,20 @@ export default function YogaWithSerap() {
         >
           <li>
             50 hours Yin Yoga & Breathwork and 50 hours Yin Yoga & Fascia with
-            <strong> Fran Gottschild</strong> – exploring the science and art of
+             Fran Gottschild – exploring the science and art of
             releasing tension stored deep in the body.
           </li>
           <li>
-            50 hours Kundalini Yoga with <strong>Gobinde Yoga Zürich</strong> –
+            50 hours Kundalini Yoga with Gobinde Yoga Zürich –
             unlocking energy, nervous system balance, and clarity through kriyas,
             mantra, and breathwork.
           </li>
         </ul>
 
         <p>
-          Today, my classes focus on <strong>Yin Yoga</strong> and therapeutic{" "}
-          <strong>Hatha Yoga</strong>, infused with elements of{" "}
-          <strong>Kundalini Yoga</strong> and breathwork. Every session is an
+          Today, my classes focus on Yin Yoga and therapeutic{" "}
+          Hatha Yoga, infused with elements of{" "}
+          Kundalini Yoga and breathwork. Every session is an
           invitation to slow down, release, and reconnect – offering space to
           breathe deeply, regulate the nervous system, and feel safe in your body
           again.

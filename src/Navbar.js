@@ -141,7 +141,7 @@ function Navbar() {
             items={[
               { label: "Our Story", link: "#our-story" }
 ,
-              { label: "Meet the Team", link: "/about/team" },
+              { label: "Meet the Team", link: "#team" },
               { label: "Mission & Vision", link: "/about/mission" },
             ]}
           />
@@ -166,8 +166,8 @@ function Navbar() {
 
           {/* Other menu items */}
           {[
-            { name: "Surf Spots", link: "/surf-spots" },
-            { name: "Rentals", link: "/rentals" },
+            { name: "Tour", link: "#tour" },
+            { name: "Rentals", link: "#rentals" },
             
             { name: "Yoga", link: "#yoga" },
 

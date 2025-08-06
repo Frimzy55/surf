@@ -1,6 +1,5 @@
-// OurStory.jsx
 import React, { useEffect } from "react";
-import { FaWater, FaDumbbell, FaSmile, FaUsers } from "react-icons/fa";
+import { GiWaveSurfer, GiSurfBoard, GiIsland, GiLifeBuoy } from "react-icons/gi";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -11,83 +10,110 @@ export default function WhySurfing() {
 
   const cardData = [
     {
-      icon: <FaWater size={40} color="#0d6efd" />,
-      bg: "linear-gradient(135deg, #6dd5ed, #2193b0)",
-      text: "You can't describe the rush of riding a wave—it's something you have to feel for yourself. Grab a board, hit the water, and experience the thrill!",
+      icon: <GiWaveSurfer size={60} color="#00d4ff" />,
+      title: "Ride the Waves",
+      text: "Feel the ultimate rush of surfing as you ride waves and connect with the ocean like never before.",
       delay: 0,
     },
     {
-      icon: <FaDumbbell size={40} color="#ff4d6d" />,
-      bg: "linear-gradient(135deg, #ff9a9e, #fecfef)",
-      text: "Surfing boosts your strength, balance, and fitness—and beyond that, just being in the ocean does wonders for your health.",
+      icon: <GiSurfBoard size={60} color="#ff9800" />,
+      title: "Build Strength",
+      text: "Improve balance, build strength, and enhance coordination — surfing is a fun full-body workout.",
       delay: 200,
     },
     {
-      icon: <FaSmile size={40} color="#ffb400" />,
-      bg: "linear-gradient(135deg, #fbc2eb, #a6c1ee)",
-      text: "Surfing not only gets you fit but also builds your confidence. As you face challenges, you'll push your limits and grow stronger.",
+      icon: <GiIsland size={60} color="#4caf50" />,
+      title: "Relax in Nature",
+      text: "Experience pure relaxation in tropical settings — the beach is your natural stress reliever.",
       delay: 400,
     },
     {
-      icon: <FaUsers size={40} color="#2ecc71" />,
-      bg: "linear-gradient(135deg, #fddb92, #d1fdff)",
-      text: "Make new friends and join the surfing community. Share the stoke, catch waves together, and have unforgettable fun!",
+      icon: <GiLifeBuoy size={60} color="#f44336" />,
+      title: "Join the Community",
+      text: "Join a supportive surf community where friendships are made and adventures are shared.",
       delay: 600,
     },
   ];
 
   return (
     <section
-      id=""
       style={{
-        padding: "60px 20px",
-        background: "#e0f7fa", // Light blue
-        minHeight: "60vh",
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fit=crop&w=1600&q=80')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        padding: "80px 20px",
+        position: "relative",
       }}
     >
-      <div className="container">
+      {/* Dark overlay for text readability */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "rgba(0,0,0,0.5)",
+        }}
+      ></div>
+
+      <div className="container position-relative">
         <h2
-          className="fw-bold mb-4 text-center"
+          className="fw-bold mb-5 text-center text-white"
           data-aos="fade-up"
-          data-aos-delay="100"
         >
           WHY SURFING? HERE ARE JUST A COUPLE OF REASONS!
         </h2>
+
         <div className="row justify-content-center">
           {cardData.map((card, index) => (
             <div
-              className="col-md-3 col-sm-6 mb-4"
+              className="col-md-5 col-lg-3 col-sm-6 mb-4"
               key={index}
               data-aos="fade-up"
               data-aos-delay={card.delay}
             >
               <div
-                className="card shadow-lg h-100 border-0 text-center"
                 style={{
+                  background: "rgba(255, 255, 255, 0.15)",
+                  backdropFilter: "blur(10px)",
                   borderRadius: "15px",
-                  background: card.bg,
-                  color: "black",
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  padding: "20px",
+                  padding: "25px",
+                  color: "white",
+                  textAlign: "center",
+                  transition: "transform 0.3s ease",
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "scale(1.05)";
-                  e.currentTarget.style.boxShadow =
-                    "0 10px 25px rgba(0,0,0,0.3)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "scale(1)";
-                  e.currentTarget.style.boxShadow =
-                    "0 5px 15px rgba(0,0,0,0.1)";
-                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.transform = "translateY(-10px)")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.transform = "translateY(0)")
+                }
               >
                 <div className="mb-3">{card.icon}</div>
-                <p className="card-text">{card.text}</p>
+                <h5 className="fw-bold">{card.title}</h5>
+                <p style={{ fontSize: "0.95rem" }}>{card.text}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Decorative wave at bottom */}
+      <svg
+        style={{
+          position: "absolute",
+          bottom: "-1px",
+          left: 0,
+          width: "100%",
+          height: "80px",
+        }}
+        viewBox="0 0 1440 320"
+      >
+        <path
+          fill="#fff"
+          fillOpacity="1"
+          d="M0,192L48,208C96,224,192,256,288,261.3C384,267,480,245,576,213.3C672,181,768,139,864,138.7C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192V320H0Z"
+        ></path>
+      </svg>
     </section>
   );
 }
