@@ -64,13 +64,13 @@ export default function YogaWithSerap() {
             fontWeight: "bold"
           }}
         >
-          Yoga with Serap – Healing Through Movement & Breath
+          Yoga with Serap  Healing Through Movement & Breath
         </h1>
 
         <p>
           For over 20 years, I have been on a path of mindfulness and meditation,
           guided by the wisdom of teachers such as Merle Heynen (Switzerland).
-          This journey naturally led me to yoga – a practice that deeply connects
+          This journey naturally led me to yoga  a practice that deeply connects
           body, mind, and soul.
         </p>
 

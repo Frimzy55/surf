@@ -149,9 +149,9 @@ function Navbar() {
             title="Surf School"
             id="surfSchoolDropdown"
             items={[
-              { label: "Beginner Lessons", link: "/surf-school/beginner" },
-              { label: "Intermediate Lessons", link: "/surf-school/intermediate" },
-              { label: "Advanced Coaching", link: "/surf-school/advanced" },
+              { label: "Beginner Lessons", link: "#beginner1" },
+              { label: "Intermediate Lessons", link: "#intermediate" },
+              { label: "Advanced Coaching", link: "#advanced" },
             ]}
           />
           <DropdownMenu

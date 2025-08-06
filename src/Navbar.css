@@ -1,6 +1,8 @@
-/* Default hidden state for dropdowns */
+/* -------------------
+   Default dropdown hidden state
+------------------- */
 .navbar .dropdown-menu {
-  display: none; /* Let Bootstrap control visibility */
+  display: none;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
@@ -27,9 +29,22 @@
   border: none !important;
 }
 
-/* Mobile styles */
+/* -------------------
+   Mobile styles
+------------------- */
 @media (max-width: 991px) {
-  /* Let Bootstrap handle showing dropdown on click */
+  /* Slide-down animation when opening mobile menu */
+  .navbar-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-in-out;
+  }
+
+  .navbar-collapse.show {
+    max-height: 500px; /* Large enough for menu */
+  }
+
+  /* Dropdown menu when expanded on mobile */
   .navbar-nav .dropdown-menu.show {
     display: block;
     opacity: 1;
@@ -52,12 +67,14 @@
   }
 }
 
-
-
-
-/* Navbar background and link styles */
+/* -------------------
+   Navbar background & link styles
+------------------- */
 .navbar {
   background-color: #111 !important;
+  position: sticky; /* Always visible */
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-nav .nav-link {
@@ -71,27 +88,17 @@
   color: #ffb400 !important; /* gold highlight */
 }
 
-/* Dropdown styles */
+/* -------------------
+   Dropdown styling
+------------------- */
 .dropdown-menu {
-  background-color: #222;
+  background-color: #222222;
   border: none;
   border-radius: 8px;
   padding: 8px 0;
   box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-  opacity: 0;
-  transform: translateY(10px);
-  visibility: hidden;
-  transition: all 0.3s ease;
 }
 
-/* Show dropdown smoothly */
-.dropdown.show .dropdown-menu {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-}
-
-/* Dropdown items */
 .dropdown-menu .dropdown-item {
   color: #fff;
   font-weight: 500;
@@ -101,11 +108,13 @@
 
 .dropdown-menu .dropdown-item:hover {
   background-color: #ffb400;
-  color: #111;
+  color: #bd3a3a;
   padding-left: 25px; /* small slide effect */
 }
 
-/* Mobile toggle animation */
+/* -------------------
+   Mobile toggle styling
+------------------- */
 .navbar-toggler {
   border: none;
 }
@@ -113,3 +122,11 @@
 .navbar-toggler:focus {
   box-shadow: none;
 }
+
+
+
+/* Makes hamburger icon gold on dark background */
+.navbar-toggler-icon {
+  filter: invert(66%) sepia(82%) saturate(450%) hue-rotate(10deg) brightness(2.1);
+}
+

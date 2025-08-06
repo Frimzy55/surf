@@ -59,7 +59,7 @@ export default function OurStory() {
                   How We Started
                 </h5>
                 <p className="card-text text-center">
-                  Loshe's Surf School started with a dream — to bring the joy
+                  Loshe's Surf School started with a dream  to bring the joy
                   and excitement of surfing to people from all walks of life.
                   From our humble beginnings on the sunny beaches of Ghana, we
                   have grown into a vibrant surf community welcoming beginners

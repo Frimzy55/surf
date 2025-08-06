@@ -1,0 +1,70 @@
+.advanced-img {
+  flex: 0 0 300px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 768px) {
+  .beginner-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .beginner-img {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+.crazy-btn {
+  background-color: #4da3ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.crazy-btn:hover {
+  animation: pulse 0.8s infinite;
+  background-color: #1c82e2;
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(77, 163, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(77, 163, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(77, 163, 255, 0);
+  }
+}
+
+
+
+
+.toggle-content {
+  opacity: 0;
+  transform: translateY(-10px);
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;
+}
+
+.toggle-content.show {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 2000px; /* Large enough to fit the content */
+}

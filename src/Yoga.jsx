@@ -9,6 +9,8 @@ import yoga2 from "./assets/yoga2.jpeg";
 import yoga3 from "./assets/yoga3.jpeg";
 import yog from "./assets/yog.jpeg";
 import yoga from "./assets/yoga.jpeg";
+import yoga11 from "./assets/yoga11.jpeg";
+//import natural from "./assets/natural.jpeg";
 
 export default function Yoga() {
   const navigate = useNavigate();
@@ -16,12 +18,13 @@ export default function Yoga() {
   // All yoga images (local + online)
   const allImages = [
     
-    "https://images.unsplash.com/photo-1517836357463-d25dfeac3438",
+    yoga11,
     yog,
     yoga1,
     yoga2,
     yoga3,
     yoga
+    
   ];
 
   const [images, setImages] = useState(allImages);
@@ -46,7 +49,7 @@ export default function Yoga() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [0]);
+  }, );
 
   return (
     <section id="yoga" className="yoga-section">

@@ -18,13 +18,13 @@ export default function WhySurfing() {
     {
       icon: <GiSurfBoard size={60} color="#ff9800" />,
       title: "Build Strength",
-      text: "Improve balance, build strength, and enhance coordination — surfing is a fun full-body workout.",
+      text: "Improve balance, build strength, and enhance coordination  surfing is a fun full-body workout.",
       delay: 200,
     },
     {
       icon: <GiIsland size={60} color="#4caf50" />,
       title: "Relax in Nature",
-      text: "Experience pure relaxation in tropical settings — the beach is your natural stress reliever.",
+      text: "Experience pure relaxation in tropical settings the beach is your natural stress reliever.",
       delay: 400,
     },
     {

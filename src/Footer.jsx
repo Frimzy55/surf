@@ -12,8 +12,8 @@ export default function Footer() {
       }}
     >
       <p style={{ margin: 0 }}>
-        © {new Date().getFullYear()} Loshe's Surf School | Designed & Developed
-        by <span style={{ color: "#0dcaf0", fontWeight: "bold" }}>Your Name</span>
+        © {new Date().getFullYear()}  | Designed & Developed
+        by <span style={{ color: "#0dcaf0", fontWeight: "bold" }}>Frimz Denver</span>
       </p>
     </footer>
   );

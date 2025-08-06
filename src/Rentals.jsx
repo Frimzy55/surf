@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 // Importing three local images
 import surfboardsImage1 from "./assets/surf1.jpeg";
 import surfboardsImage2 from "./assets/surf2.jpeg";
-import surfboardsImage3 from "./assets/surf3.jpeg";
+import surfboardsImage3 from "./assets/aa.jpeg";
 
 export default function Rentals() {
   const navigate = useNavigate();
@@ -66,15 +66,19 @@ export default function Rentals() {
                 data-aos-delay="400"
               />
               <img
-                src={surfboardsImage3}
-                alt="Different surfboard"
-                style={{
-                  ...imageStyle,
-                  gridColumn: "span 2", // Makes last image wider
-                }}
-                data-aos="fade-up"
-                data-aos-delay="600"
-              />
+  src={surfboardsImage3}
+  alt="Different surfboard"
+  style={{
+    ...imageStyle,
+    gridColumn: "span 2", // Makes last image wider
+    height: "450px", // ✅ Increased height
+    objectFit: "cover", // ✅ Keeps proportions and fills space
+    borderRadius: "12px" // Optional for nicer look
+  }}
+  data-aos="fade-up"
+  data-aos-delay="600"
+/>
+
             </div>
           </div>
 
@@ -91,7 +95,7 @@ export default function Rentals() {
 
             <p>
               Loshe offers a wide range of boards to suit all skill levels and
-              preferences — from high‑performance shortboards for experienced
+              preferences  from high‑performance shortboards for experienced
               surfers to longboards for beginners and those looking for a relaxed
               ride.
             </p>
