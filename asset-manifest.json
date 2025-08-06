@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/surf/static/css/main.4c5bd068.css",
-    "main.js": "/surf/static/js/main.ef40731e.js",
+    "main.css": "/surf/static/css/main.6763d3ed.css",
+    "main.js": "/surf/static/js/main.103210a2.js",
     "static/js/453.1a16ed4e.chunk.js": "/surf/static/js/453.1a16ed4e.chunk.js",
     "static/media/surflogo1.png": "/surf/static/media/surflogo1.4688275746e6a1432261.png",
     "static/media/surf2.jpeg": "/surf/static/media/surf2.725459f87ce699eb96db.jpeg",
@@ -24,12 +24,12 @@
     "static/media/image4.jpeg": "/surf/static/media/image4.6f7c613f5708f0fc7b99.jpeg",
     "static/media/bbb.jpg": "/surf/static/media/bbb.243e74b0c743754b57f9.jpg",
     "index.html": "/surf/index.html",
-    "main.4c5bd068.css.map": "/surf/static/css/main.4c5bd068.css.map",
-    "main.ef40731e.js.map": "/surf/static/js/main.ef40731e.js.map",
+    "main.6763d3ed.css.map": "/surf/static/css/main.6763d3ed.css.map",
+    "main.103210a2.js.map": "/surf/static/js/main.103210a2.js.map",
     "453.1a16ed4e.chunk.js.map": "/surf/static/js/453.1a16ed4e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c5bd068.css",
-    "static/js/main.ef40731e.js"
+    "static/css/main.6763d3ed.css",
+    "static/js/main.103210a2.js"
   ]
 }
