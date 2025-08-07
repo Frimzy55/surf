@@ -88,15 +88,18 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm px-4 fixed-top">
       {/* Logo */}
-      <a className="navbar-brand" href="/">
-        <img
-          src={logo}
-          alt="Logo"
-          height="60"
-          className="d-inline-block align-text-top"
-          style={{ marginRight: "10px" }}
-        />
-      </a>
+      <a className="navbar-brand d-flex align-items-center" href="/" style={{ gap: "10px" }}>
+  <img
+    src={logo}
+    alt="Logo"
+    height="60"
+    className="d-inline-block align-text-top"
+  />
+  <span style={{ color: "#fff", fontSize: "0.8rem", fontWeight: "bold" }}>
+    Loshe's Surf School, Camp and Tours
+  </span>
+</a>
+
 
       {/* Mobile toggle button */}
       <button
@@ -121,18 +124,21 @@ function Navbar() {
       >
         <ul className="navbar-nav ms-auto">
           {/* Home */}
-          <li className="nav-item">
-            <a
-              className="nav-link px-3"
-              href="#home"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("home");
-              }}
-            >
-              Home
-            </a>
-          </li>
+         
+        {/* Home */}
+<li className="nav-item">
+  <a
+    className="nav-link px-3"
+    href="#hello"
+    onClick={(e) => {
+      e.preventDefault();
+      scrollToSection("hello");
+    }}
+  >
+    Home
+  </a>
+</li>
+
 
           {/* Dropdown Menus */}
           <DropdownMenu
@@ -142,7 +148,7 @@ function Navbar() {
               { label: "Our Story", link: "#our-story" }
 ,
               { label: "Meet the Team", link: "#team" },
-              { label: "Mission & Vision", link: "/about/mission" },
+              { label: "Mission & Vision", link: "#mission" },
             ]}
           />
           <DropdownMenu

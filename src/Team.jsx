@@ -19,9 +19,9 @@ export default function Team() {
     },
     {
       name: "Emmanuel Armstrong",
-      role: "Yoga & Wellness Coach",
+      role: "Intermediate Surf Coach",
       img: maryImg,
-      shortDesc: "Certified yoga instructor with 8+ years...",
+      shortDesc: "Certified intermediate instructor ",
       link: "/bio/mary",
     },
     {
@@ -72,7 +72,7 @@ export default function Team() {
                   cursor: "pointer",
                 }}
               >
-                View Bio →
+                View Status →
               </button>
             </div>
           ))}

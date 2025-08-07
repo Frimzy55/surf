@@ -111,4 +111,4 @@ export default function BeginnerLessons() {
       </div>
     </section>
   );
-}
+}      

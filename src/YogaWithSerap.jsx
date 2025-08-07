@@ -12,6 +12,10 @@ export default function YogaWithSerap() {
     AOS.init({ duration: 1200, once: true });
   }, []);
 
+   React.useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
   return (
     <div
       style={{

@@ -11,6 +11,10 @@ export default function OurStory() {
     });
   }, []);
 
+  useEffect(() => {
+      window.scrollTo(0, 0); // Scroll to top on mount
+    }, []);
+
   return (
     <section
       id="our-story"
@@ -25,9 +29,11 @@ export default function OurStory() {
           className="fw-bold mb-4 text-center"
           data-aos="zoom-in-up"
           data-aos-delay="200"
+          style={{ color: "#4da3ff" }}
         >
-          Our Story
+           Our Story
         </h2>
+        
         <div className="row justify-content-center">
           
           {/* Card 1 */}

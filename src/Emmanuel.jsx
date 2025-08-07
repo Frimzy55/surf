@@ -36,13 +36,10 @@ export default function MaryBio() {
       />
 
       <h2 style={{ color: "#4da3ff" }}>Emmanuel Armstrong</h2>
-      <p><strong>Yoga & Wellness Coach</strong></p>
+      <p><strong>Intermediate Surf Coach</strong></p>
 
       <p>
-        Emmanuel Armstrong specializes in holistic wellness, combining yoga, breathing
-        exercises, and meditation to help clients achieve both physical and mental
-        balance. She has trained in multiple countries and brings an international
-        approach to wellness.
+        Emmanuel Armstrong is an intermediate surf coach who blends technical surf instruction with mindfulness techniques to enhance performance and personal growth. With training across multiple countries, she brings an international perspective to surf coaching, focusing on both skill development and mental balance in the water.
       </p>
     </div>
   );

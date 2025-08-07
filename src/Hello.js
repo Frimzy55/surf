@@ -1,25 +1,28 @@
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-//import { motion } from "framer-motion"; // Keep if you plan to animate other parts
-import SurfHeading from "./SurfHeading"; // <-- New import
+import { FaInstagram, FaFacebookF, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
-// Import your background images
+import SurfHeading from "./SurfHeading";
+
+// Background images
 import img1 from "./assets/image1.jpeg";
-//import img2 from "./assets/image2.jpeg";
+import inter from "./assets/intermediate.jpeg";
 import img3 from "./assets/image3.jpeg";
 import img4 from "./assets/image4.jpeg";
-import im9 from "./assets/im9.jpeg";
+import im9 from "./assets/ocean.jpeg";
 import img7 from "./assets/image11.jpeg";
 import n from "./assets/n.jpeg";
 import ff from "./assets/ff.jpeg";
-// Import new sections
+import adv from "./assets/advanced.jpeg";
+
+// Sections
 import WhySurfing from "./WhySurfing";
 import BeginnerLessons from "./BeginnerLessons";
 import EquipmentInfo from "./EquipmentInfo";
 
 function Hello() {
-  const images = [img1, img3, img4,img7,n,im9,ff];
+  const images = [adv, img1, img3, img4, img7, n, ff, inter, im9];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Slideshow change every 4 seconds
@@ -35,7 +38,6 @@ function Hello() {
     AOS.init({ duration: 1200, once: true });
   }, []);
 
-  // Scroll to WhySurfing section
   const scrollToSection = () => {
     const section = document.getElementById("why-surfing");
     if (section) {
@@ -45,14 +47,17 @@ function Hello() {
 
   return (
     <>
-      {/* Hero Slideshow */}
       <div
+        id="hello"
         style={{
           backgroundImage: `url(${images[currentIndex]})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          minHeight: "80vh",
+          height: "100vh",
+          width: "100%",
+          margin: 0,
+          padding: 0,
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -62,12 +67,12 @@ function Hello() {
           transition: "background-image 1s ease-in-out",
         }}
       >
-        {/* Crazy Animated Headings */}
         <SurfHeading />
 
-        {/* Learn More Button */}
         <button
           onClick={scrollToSection}
+          onMouseEnter={(e) => (e.target.style.backgroundColor = "#e68900")}
+          onMouseLeave={(e) => (e.target.style.backgroundColor = "#ff9800")}
           style={{
             marginTop: "20px",
             padding: "12px 28px",
@@ -80,14 +85,47 @@ function Hello() {
             cursor: "pointer",
             transition: "all 0.3s ease",
           }}
-          onMouseOver={(e) => (e.target.style.backgroundColor = "#e68900")}
-          onMouseOut={(e) => (e.target.style.backgroundColor = "#ff9800")}
         >
           Learn More
         </button>
+
+        {/* Social Media */}
+        <div className="text-center" style={{ marginTop: "30px" }}>
+          <h5 className="fw-bold mb-3">Follow Us</h5>
+          <div className="d-flex justify-content-center gap-4">
+            <a
+              href="https://www.facebook.com/share/15jiiB1rGk/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF size={30} color="#4267B2" />
+            </a>
+            <a
+              href="https://www.instagram.com/loshes_surf_school/profilecard/?igsh=cHVlY29rZjFxZXd0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram size={30} color="#C13584" />
+            </a>
+            <a
+              href="https://wa.me/233256749130"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp size={30} color="#25D366" />
+            </a>
+            <a
+              href="https://www.youtube.com/@EvansAbban-w9o"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaYoutube size={30} color="#FF0000" />
+            </a>
+          </div>
+        </div>
       </div>
 
-      {/* Imported Sections */}
+      {/* Page Sections */}
       <div id="why-surfing">
         <WhySurfing />
       </div>

@@ -1,11 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import evansImg from "./assets/evans.jpeg";
-import accreditationImg from "./assets/cert.jpeg"; // Your ISA certificate image
-import accreditationImg2 from "./assets/cert1.jpeg"; // Second certificate image
+import accreditationImg from "./assets/cert.jpeg";
+import accreditationImg2 from "./assets/cert1.jpeg";
 
 export default function EvansBio() {
   const navigate = useNavigate();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div style={{ padding: "40px 20px", maxWidth: "900px", margin: "auto" }}>
@@ -41,9 +46,11 @@ export default function EvansBio() {
 
       {/* Name & Role */}
       <h2 style={{ color: "#4da3ff" }}>Evans Abban</h2>
+      
       <p>
         <strong>Head Surf Instructor</strong>
       </p>
+      
 
       {/* Bio */}
       <h3 style={{ marginTop: "30px", color: "#4da3ff" }}>
@@ -89,7 +96,6 @@ export default function EvansBio() {
         Professional Accreditation
       </h3>
 
-      {/* Certificates side-by-side */}
       <div
         style={{
           display: "flex",
@@ -130,7 +136,7 @@ export default function EvansBio() {
       {/* Buttons */}
       <div style={{ marginTop: "20px" }}>
         <button
-          onClick={() => navigate("/book-session")}
+          onClick={() => navigate("/booking")}
           style={{
             backgroundColor: "#ffb400",
             color: "#111",
@@ -145,7 +151,7 @@ export default function EvansBio() {
           Book a session with me →
         </button>
         <button
-          onClick={() => navigate("/lesson-packages")}
+          onClick={() => navigate("/nn")}
           style={{
             backgroundColor: "#4da3ff",
             color: "#fff",
@@ -159,6 +165,28 @@ export default function EvansBio() {
           Checkout my lesson packages →
         </button>
       </div>
+
+      {/* Social Media Links */}
+      <div style={{ marginTop: "40px", textAlign: "center" }}>
+        <h4 style={{ color: "#4da3ff", marginBottom: "10px" }}>Follow Evans</h4>
+        <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+          <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+            <FaFacebook size={28} color="#4267B2" />
+          </a>
+          <a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener noreferrer">
+            <FaInstagram size={28} color="#C13584" />
+          </a>
+          <a href="https://wa.me/233256749130" target="_blank" rel="noopener noreferrer">
+            <FaWhatsapp size={28} color="#25D366" />
+          </a>
+          <a href="https://www.youtube.com/yourchannel" target="_blank" rel="noopener noreferrer">
+            <FaYoutube size={28} color="#FF0000" />
+          </a>
+        </div>
+      </div>
+      
     </div>
   );
 }
+
+                

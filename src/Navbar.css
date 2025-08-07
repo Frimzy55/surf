@@ -71,14 +71,14 @@
    Navbar background & link styles
 ------------------- */
 .navbar {
-  background-color: #111 !important;
+  background-color: #06376eee !important;
   position: sticky; /* Always visible */
   top: 0;
   z-index: 1000;
 }
 
 .navbar-nav .nav-link {
-  color: white !important;
+  color: rgb(240, 234, 234) !important;
   font-weight: 500;
   padding: 10px 15px;
   transition: color 0.3s ease, background 0.3s ease;
@@ -92,7 +92,7 @@
    Dropdown styling
 ------------------- */
 .dropdown-menu {
-  background-color: #222222;
+  background-color: #06376eee;
   border: none;
   border-radius: 8px;
   padding: 8px 0;
@@ -100,7 +100,7 @@
 }
 
 .dropdown-menu .dropdown-item {
-  color: #fff;
+  color: #e94e4e;
   font-weight: 500;
   padding: 10px 20px;
   transition: background 0.3s ease, padding-left 0.3s ease;

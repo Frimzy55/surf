@@ -21,7 +21,7 @@ function EquipmentInfo() {
         style={{
           maxWidth: "700px",
           borderRadius: "20px",
-          background: "linear-gradient(135deg, #5ad7fa, #a7d8f0)",
+          background: "linear-gradient(135deg, #5ad7fa, #a4d6f0ff)",
           transition: "transform 0.3s ease, box-shadow 0.3s ease",
         }}
         onMouseEnter={(e) => {

@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
 import "./Advanced.css"; // Reuse same CSS for layout
-import advancedLessonImg from "./assets/advanced.jpeg"; // Replace with your image
+import advancedLessonImg from "./assets/image11.jpeg"; // Replace with your image
 
 export default function Advanced() {
   const navigate = useNavigate();
@@ -83,7 +83,7 @@ export default function Advanced() {
            
 
             <button
-              onClick={() => navigate("/advanced-booking")}
+              onClick={() => navigate("/beginner-booking")}
               className="crazy-btn"
             >
               Book an Advanced Lesson →

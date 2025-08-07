@@ -1,16 +1,18 @@
 import React from "react";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowLeft, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-export default function BeginnerBooking() {
+export default function BookSession() {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
-    <div style={{ padding: "80px 20px", textAlign: "center" }}>
+    <div
+    id="book1"
+     style={{ padding: "80px 20px", textAlign: "center" }}>
       {/* Back Button */}
       <button
         onClick={() => navigate(-1)}
@@ -29,26 +31,27 @@ export default function BeginnerBooking() {
       </button>
 
       {/* Title */}
-      <h1 style={{ color: "#4da3ff" }}>Book Your Lesson</h1>
+      <h1 style={{ color: "#4da3ff" }}>Book a Session With Me</h1>
       <p style={{ maxWidth: "600px", margin: "20px auto", color: "#555" }}>
-        Fill in your details below and we’ll confirm your booking as soon as
-        possible.
+        Fill in your details below to request a private surf session. We’ll get back to you soon with confirmation.
       </p>
 
-      {/* Booking Hours Info */}
-      <div style={{
-        background: "#f0faff",
-        padding: "15px",
-        borderRadius: "8px",
-        marginBottom: "20px",
-        borderLeft: "5px solid #4da3ff",
-        maxWidth: "400px",
-        margin: "0 auto"
-      }}>
-        <p><strong>Booking Hours:</strong></p>
-        <p>Mon - Sun: 9:00am - 6:00pm</p>
-        <p>📞 +233 25 674 9130</p>
-        <p>📍 Cape 3 Point, Ecolodge</p>
+      {/* Contact Information */}
+      <div
+        style={{
+          background: "#f0faff",
+          padding: "15px",
+          borderRadius: "8px",
+          marginBottom: "30px",
+          borderLeft: "5px solid #4da3ff",
+          maxWidth: "400px",
+          margin: "0 auto 30px",
+          textAlign: "left",
+        }}
+      >
+        <p><FaPhoneAlt style={{ marginRight: "8px" }} /> +233 25 674 9130</p>
+        <p><FaEnvelope style={{ marginRight: "8px" }} /> loshesurfschool@gmail.com</p>
+        <p><FaMapMarkerAlt style={{ marginRight: "8px" }} /> Cape 3 Points, Ecolodge, Ghana</p>
       </div>
 
       {/* Booking Form */}
@@ -63,7 +66,10 @@ export default function BeginnerBooking() {
       >
         <input type="text" placeholder="Your Name" required />
         <input type="email" placeholder="Your Email" required />
+        <input type="tel" placeholder="Phone Number (optional)" />
         <input type="date" required />
+        <textarea placeholder="Any message or request?" rows="4" />
+
         <button
           type="submit"
           style={{
@@ -73,9 +79,10 @@ export default function BeginnerBooking() {
             border: "none",
             borderRadius: "6px",
             cursor: "pointer",
+            fontWeight: "600",
           }}
         >
-          Submit Booking
+          Submit Request
         </button>
       </form>
     </div>

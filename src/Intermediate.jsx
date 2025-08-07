@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
 import "./Intermediate.css";
-import intermediateLessonImg from "./assets/intermediate.jpeg";
+import intermediateLessonImg from "./assets/im9.jpeg";
 
 export default function Intermediate() {
   const navigate = useNavigate();
@@ -86,7 +86,7 @@ export default function Intermediate() {
             
 
             <button
-              onClick={() => navigate("/intermediate-booking")}
+              onClick={() => navigate("/beginner-booking")}
               className="crazy-btn"
             >
               Book an Intermediate Lesson →

@@ -3,14 +3,18 @@ import { FaArrowLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 // Import surfboard images from assets
-import surf1 from "./assets/bbb.jpg";
+import surf1 from "./assets/aa.jpeg";
 import surf2 from "./assets/b.jpg"; // 👈 Make sure this exists in assets
 
 export default function RentalPrices() {
   const navigate = useNavigate();
 
+
+   React.useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   // Local surfboard images
-  const surfImages = [surf1, surf2];
+  const surfImages = [surf2,surf1];
 
   return (
     <section

@@ -10,7 +10,8 @@ import yoga3 from "./assets/yoga3.jpeg";
 import yog from "./assets/yog.jpeg";
 import yoga from "./assets/yoga.jpeg";
 import yoga11 from "./assets/yoga11.jpeg";
-//import natural from "./assets/natural.jpeg";
+import image2 from "./assets/image2.jpeg";
+import nat from "./assets/natural.jpeg";
 
 export default function Yoga() {
   const navigate = useNavigate();
@@ -23,7 +24,9 @@ export default function Yoga() {
     yoga1,
     yoga2,
     yoga3,
-    yoga
+    yoga,
+    image2,
+    nat
     
   ];
 

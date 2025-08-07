@@ -1,4 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Navbar from './Navbar';
 import Hello from './Hello';
 import Contact from "./Contact";
@@ -8,7 +10,6 @@ import Yoga from "./Yoga";
 import YogaWithSerap from "./YogaWithSerap";
 import Rentals from "./Rentals";
 import RentalPrices from "./RentalPrices";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Tour from './Tour';
 import Team from './Team';
 import BeginnerLessons1 from './BeginnerLessons1';
@@ -18,50 +19,47 @@ import MaryBio from "./Emmanuel";
 import JohnBio from "./JohnBio";
 import Intermediate from './Intermediate';
 import Advanced from './Advanced';
+import Missions from './Missions';
+import BookSession1 from './BookSession1';
+//import IntermediateBooking from "./IntermediateBooking"; // ✅ If you have it
 
 function App() {
   return (
     <Router basename="/surf">
-      {/* ✅ Navbar on every page */}
-      <Navbar />
-
       <Routes>
-        {/* Home Page */}
+        {/* ✅ Homepage route with Navbar */}
         <Route
           path="/"
           element={
             <>
+              <Navbar />
               <Hello />
               <Team />
               <OurStory />
+              <Missions />
               <BeginnerLessons1 />
-              <Intermediate/>
-              <Advanced/>
+              <Intermediate />
+              <Advanced />
               <Rentals />
               <Tour />
               <Yoga />
-              
               <Contact />
+              <Footer />
             </>
           }
         />
 
-        {/* Yoga with Serap Page */}
-        <Route path="/yoga-with-serap" element={<YogaWithSerap />} />
+        {/* ✅ Other routes without Navbar */}
+        <Route path="/yoga-with-serap" element={<><YogaWithSerap /></>} />
+        <Route path="/rental-prices" element={<><RentalPrices /></>} />
+        <Route path="/beginner-booking" element={<><BeginnerBooking /></>} />
+         <Route path="/booking" element={<><BookSession1 /></>} />
+        
 
-        {/* Rental Prices Page */}
-        <Route path="/rental-prices" element={<RentalPrices />} />
-
-        {/* Beginner Lesson Booking Page */}
-        <Route path="/beginner-booking" element={<BeginnerBooking />} />
-
-        <Route path="/bio/evans" element={<EvansBio />} />
-        <Route path="/bio/mary" element={<MaryBio />} />
-        <Route path="/bio/john" element={<JohnBio />} />
+        <Route path="/bio/evans" element={<><EvansBio /></>} />
+        <Route path="/bio/mary" element={<><MaryBio /></>} />
+        <Route path="/bio/john" element={<><JohnBio /></>} />
       </Routes>
-
-      {/* ✅ Footer on every page */}
-      <Footer />
     </Router>
   );
 }
