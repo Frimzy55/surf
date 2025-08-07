@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/surf/static/css/main.eab230d3.css",
-    "main.js": "/surf/static/js/main.4d595552.js",
+    "main.css": "/surf/static/css/main.6148f3d3.css",
+    "main.js": "/surf/static/js/main.6889d614.js",
     "static/js/453.1a16ed4e.chunk.js": "/surf/static/js/453.1a16ed4e.chunk.js",
     "static/media/surflogo1.png": "/surf/static/media/surflogo1.4688275746e6a1432261.png",
     "static/media/surf2.jpeg": "/surf/static/media/surf2.725459f87ce699eb96db.jpeg",
     "static/media/aa.jpeg": "/surf/static/media/aa.6989dd4a93816695400f.jpeg",
     "static/media/intermediate.jpeg": "/surf/static/media/intermediate.ac2edd59bf28ec0d07cd.jpeg",
     "static/media/tour2.jpeg": "/surf/static/media/tour2.d9ff3788952dd287bfc0.jpeg",
+    "static/media/image2.jpeg": "/surf/static/media/image2.658dbc407d0bdc3b8fdb.jpeg",
     "static/media/advanced.jpeg": "/surf/static/media/advanced.df9c339afb09c180518b.jpeg",
     "static/media/tour1.jpeg": "/surf/static/media/tour1.29d630725bea876341f6.jpeg",
     "static/media/n.jpeg": "/surf/static/media/n.00080d9e7ff822bd8601.jpeg",
@@ -22,6 +23,7 @@
     "static/media/im9.jpeg": "/surf/static/media/im9.15f6df885539cdadfcc3.jpeg",
     "static/media/ff.jpeg": "/surf/static/media/ff.e58f994997fadb7d76e8.jpeg",
     "static/media/image1.jpeg": "/surf/static/media/image1.a6511481cfe62e997c07.jpeg",
+    "static/media/ocean.jpeg": "/surf/static/media/ocean.b0375b6eab79ce3eda36.jpeg",
     "static/media/yog.jpeg": "/surf/static/media/yog.a6320b4fed92769efa21.jpeg",
     "static/media/image3.jpeg": "/surf/static/media/image3.09036041827fcab40dba.jpeg",
     "static/media/yoga2.jpeg": "/surf/static/media/yoga2.83f13dc77e70f391d935.jpeg",
@@ -30,16 +32,16 @@
     "static/media/surf1.jpeg": "/surf/static/media/surf1.26624d69ad306fb3a80c.jpeg",
     "static/media/member2.jpeg": "/surf/static/media/member2.6b3e19615938040ad628.jpeg",
     "static/media/yoga11.jpeg": "/surf/static/media/yoga11.e8af915c15479c7b2792.jpeg",
+    "static/media/natural.jpeg": "/surf/static/media/natural.5f3bcd0ea842f01f3737.jpeg",
     "static/media/b.jpg": "/surf/static/media/b.45ac708da1b93f81f90b.jpg",
     "static/media/image4.jpeg": "/surf/static/media/image4.6f7c613f5708f0fc7b99.jpeg",
-    "static/media/bbb.jpg": "/surf/static/media/bbb.243e74b0c743754b57f9.jpg",
     "index.html": "/surf/index.html",
-    "main.eab230d3.css.map": "/surf/static/css/main.eab230d3.css.map",
-    "main.4d595552.js.map": "/surf/static/js/main.4d595552.js.map",
+    "main.6148f3d3.css.map": "/surf/static/css/main.6148f3d3.css.map",
+    "main.6889d614.js.map": "/surf/static/js/main.6889d614.js.map",
     "453.1a16ed4e.chunk.js.map": "/surf/static/js/453.1a16ed4e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eab230d3.css",
-    "static/js/main.4d595552.js"
+    "static/css/main.6148f3d3.css",
+    "static/js/main.6889d614.js"
   ]
 }
