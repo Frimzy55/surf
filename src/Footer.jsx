@@ -5,7 +5,7 @@ export default function Footer() {
     <footer
       style={{
         background: "#111",
-        color: " #06376eee",
+        color: " #96adc7ee",
         padding: "20px 0",
         textAlign: "center",
         fontSize: "14px",
@@ -13,7 +13,7 @@ export default function Footer() {
     >
       <p style={{ margin: 0 }}>
         © {new Date().getFullYear()}  | Designed & Developed
-        by <span style={{ color: "#0dcaf0", fontWeight: "bold" }}>Frimz Denver|| +233 552424591</span>
+        by <span style={{ color: "#89d8e7be", fontWeight: "light" }}>Frimz Denver|| +233 552424591</span>
       </p>
     </footer>
   );

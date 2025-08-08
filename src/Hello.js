@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react"; 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaInstagram, FaFacebookF, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaWhatsapp, FaYoutube, FaTripadvisor } from "react-icons/fa";
 
 import SurfHeading from "./SurfHeading";
 
@@ -22,28 +22,26 @@ import BeginnerLessons from "./BeginnerLessons";
 import EquipmentInfo from "./EquipmentInfo";
 
 function Hello() {
-  const images = [adv, img1, img3, img4, img7, n, ff, inter, im9];
+  const images = useMemo(() => [adv, img1, img3, img4, img7, n, ff, inter, im9], []);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Slideshow change every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [images]);
 
-  // Initialize AOS
   useEffect(() => {
     AOS.init({ duration: 1200, once: true });
   }, []);
 
-  const scrollToSection = () => {
+  const scrollToSection = useCallback(() => {
     const section = document.getElementById("why-surfing");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
-  };
+  }, []);
 
   return (
     <>
@@ -120,6 +118,13 @@ function Hello() {
               rel="noopener noreferrer"
             >
               <FaYoutube size={30} color="#FF0000" />
+            </a>
+            <a
+              href="https://www.tripadvisor.co.uk/Attraction_Review-g15228249-d27110371-Reviews-Loshe_s_Surf_Cape_Three_Points-Cape_Three_Points_Western_Region.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTripadvisor size={30} color="#34E0A1" />
             </a>
           </div>
         </div>

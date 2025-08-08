@@ -9,6 +9,9 @@ import {
   FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
+//import { FaTripadvisor } from "react-icons/fa6"; // Import Tripadvisor icon
+import { FaTripadvisor } from "react-icons/fa";
+
 
 export default function Contact() {
   return (
@@ -64,11 +67,18 @@ export default function Contact() {
                 <a href="https://www.instagram.com/loshes_surf_school/profilecard/?igsh=cHVlY29rZjFxZXd0" target="_blank" rel="noopener noreferrer">
                   <FaInstagram size={30} color="#C13584" />
                 </a>
-                <a href="https:wa.me/233256749130" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/233256749130" target="_blank" rel="noopener noreferrer">
                   <FaWhatsapp size={30} color="#25D366" />
                 </a>
                 <a href="https://www.youtube.com/@EvansAbban-w9o" target="_blank" rel="noopener noreferrer">
                   <FaYoutube size={30} color="#FF0000" />
+                </a>
+                <a
+                  href="https://www.tripadvisor.co.uk/Attraction_Review-g15228249-d27110371-Reviews-Loshe_s_Surf_Cape_Three_Points-Cape_Three_Points_Western_Region.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTripadvisor size={30} color="#00AF87" />
                 </a>
               </div>
             </div>

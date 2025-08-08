@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./assets/surflogo1.png";
 import "./Navbar.css";
@@ -15,31 +15,33 @@ function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleToggle = () => setIsOpen(!isOpen);
-
-  const closeMenu = () => {
+  const handleToggle = useCallback(() => setIsOpen((prev) => !prev), []);
+  const closeMenu = useCallback(() => {
     setIsOpen(false);
     setActiveDropdown(null);
-  };
+  }, []);
 
   // Scroll to section by ID
-  const scrollToSection = (id) => {
+  const scrollToSection = useCallback((id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
       closeMenu();
     }
-  };
+  }, [closeMenu]);
 
   // Handle dropdown toggle for mobile
-  const toggleDropdown = (id) => {
-    if (isMobile) {
-      setActiveDropdown(activeDropdown === id ? null : id);
-    }
-  };
+  const toggleDropdown = useCallback(
+    (id) => {
+      if (isMobile) {
+        setActiveDropdown((prev) => (prev === id ? null : id));
+      }
+    },
+    [isMobile]
+  );
 
-  // Dropdown menu component
-  const DropdownMenu = ({ title, id, items }) => (
+  // Memoized DropdownMenu component
+  const DropdownMenu = useCallback(({ title, id, items }) => (
     <li
       className={`nav-item dropdown ${activeDropdown === id ? "show" : ""}`}
       onMouseEnter={() => !isMobile && setActiveDropdown(id)}
@@ -83,23 +85,30 @@ function Navbar() {
         ))}
       </ul>
     </li>
-  );
+  ), [activeDropdown, isMobile, scrollToSection, toggleDropdown, closeMenu]);
+
+  // Other links memoized
+  const otherLinks = useMemo(() => [
+    { name: "Tour", link: "#tour" },
+    { name: "Rentals", link: "#rentals" },
+    { name: "Yoga", link: "#yoga" },
+    { name: "Contact", link: "#contact" },
+  ], []);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm px-4 fixed-top">
       {/* Logo */}
       <a className="navbar-brand d-flex align-items-center" href="/" style={{ gap: "10px" }}>
-  <img
-    src={logo}
-    alt="Logo"
-    height="60"
-    className="d-inline-block align-text-top"
-  />
-  <span style={{ color: "#fff", fontSize: "0.8rem", fontWeight: "bold" }}>
-    Loshe's Surf School, Camp and Tours
-  </span>
-</a>
-
+        <img
+          src={logo}
+          alt="Logo"
+          height="60"
+          className="d-inline-block align-text-top"
+        />
+        <span style={{ color: "#fff", fontSize: "0.8rem", fontWeight: "bold" }}>
+          Loshe's Surf School, Camp and Tours
+        </span>
+      </a>
 
       {/* Mobile toggle button */}
       <button
@@ -124,29 +133,25 @@ function Navbar() {
       >
         <ul className="navbar-nav ms-auto">
           {/* Home */}
-         
-        {/* Home */}
-<li className="nav-item">
-  <a
-    className="nav-link px-3"
-    href="#hello"
-    onClick={(e) => {
-      e.preventDefault();
-      scrollToSection("hello");
-    }}
-  >
-    Home
-  </a>
-</li>
-
+          <li className="nav-item">
+            <a
+              className="nav-link px-3"
+              href="#hello"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("hello");
+              }}
+            >
+              Home
+            </a>
+          </li>
 
           {/* Dropdown Menus */}
           <DropdownMenu
             title="About"
             id="aboutDropdown"
             items={[
-              { label: "Our Story", link: "#our-story" }
-,
+              { label: "Our Story", link: "#our-story" },
               { label: "Meet the Team", link: "#team" },
               { label: "Mission & Vision", link: "#mission" },
             ]}
@@ -160,25 +165,11 @@ function Navbar() {
               { label: "Advanced Coaching", link: "#advanced" },
             ]}
           />
-          <DropdownMenu
-            title="Surf Packages"
-            id="surfPackagesDropdown"
-            items={[
-              { label: "Weekend Package", link: "/surf-packages/weekend" },
-              { label: "Weekly Package", link: "/surf-packages/weekly" },
-              { label: "Custom Package", link: "/surf-packages/custom" },
-            ]}
-          />
+          
+          
 
-          {/* Other menu items */}
-          {[
-            { name: "Tour", link: "#tour" },
-            { name: "Rentals", link: "#rentals" },
-            
-            { name: "Yoga", link: "#yoga" },
-
-            { name: "Contact", link: "#contact" }, // Changed to #contact
-          ].map((item, index) => (
+          {/* Other Links */}
+          {otherLinks.map((item, index) => (
             <li className="nav-item" key={index}>
               <a
                 className="nav-link px-3"
