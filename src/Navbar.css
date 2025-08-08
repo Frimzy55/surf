@@ -72,10 +72,13 @@
 ------------------- */
 .navbar {
   background-color: #06376eee !important;
-  position: sticky; /* Always visible */
+  position: fixed; /* Fixes navbar to top permanently */
   top: 0;
-  z-index: 1000;
+  left: 0;
+  right: 0;
+  z-index: 1030; /* Bootstrap default z-index for fixed navbars */
 }
+
 
 .navbar-nav .nav-link {
   color: rgb(240, 234, 234) !important;

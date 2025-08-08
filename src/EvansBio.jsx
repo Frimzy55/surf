@@ -1,9 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
+//import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import evansImg from "./assets/evans.jpeg";
 import accreditationImg from "./assets/cert.jpeg";
 import accreditationImg2 from "./assets/cert1.jpeg";
+import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube, FaTripadvisor } from "react-icons/fa";
+
 
 export default function EvansBio() {
   const navigate = useNavigate();
@@ -150,40 +152,34 @@ export default function EvansBio() {
         >
           Book a session with me →
         </button>
-        <button
-          onClick={() => navigate("/nn")}
-          style={{
-            backgroundColor: "#4da3ff",
-            color: "#fff",
-            border: "none",
-            padding: "10px 18px",
-            borderRadius: "6px",
-            cursor: "pointer",
-            fontWeight: "600",
-          }}
-        >
-          Checkout my lesson packages →
-        </button>
+        
       </div>
 
-      {/* Social Media Links */}
-      <div style={{ marginTop: "40px", textAlign: "center" }}>
-        <h4 style={{ color: "#4da3ff", marginBottom: "10px" }}>Follow Evans</h4>
-        <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
-          <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
-            <FaFacebook size={28} color="#4267B2" />
-          </a>
-          <a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener noreferrer">
-            <FaInstagram size={28} color="#C13584" />
-          </a>
-          <a href="https://wa.me/233256749130" target="_blank" rel="noopener noreferrer">
-            <FaWhatsapp size={28} color="#25D366" />
-          </a>
-          <a href="https://www.youtube.com/yourchannel" target="_blank" rel="noopener noreferrer">
-            <FaYoutube size={28} color="#FF0000" />
-          </a>
-        </div>
-      </div>
+       {/* Social Media */}
+                  <div className="text-center">
+                    <h5 className="fw-bold mb-3">Follow Us</h5>
+                    <div className="d-flex justify-content-center gap-4">
+                      <a href="https://www.facebook.com/share/15jiiB1rGk/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                        <FaFacebook size={30} color="#4267B2" />
+                      </a>
+                      <a href="https://www.instagram.com/loshes_surf_school/profilecard/?igsh=cHVlY29rZjFxZXd0" target="_blank" rel="noopener noreferrer">
+                        <FaInstagram size={30} color="#C13584" />
+                      </a>
+                      <a href="https://wa.me/233256749130" target="_blank" rel="noopener noreferrer">
+                        <FaWhatsapp size={30} color="#25D366" />
+                      </a>
+                      <a href="https://www.youtube.com/@EvansAbban-w9o" target="_blank" rel="noopener noreferrer">
+                        <FaYoutube size={30} color="#FF0000" />
+                      </a>
+                      <a
+                        href="https://www.tripadvisor.co.uk/Attraction_Review-g15228249-d27110371-Reviews-Loshe_s_Surf_Cape_Three_Points-Cape_Three_Points_Western_Region.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaTripadvisor size={30} color="#00AF87" />
+                      </a>
+                    </div>
+                  </div>
       
     </div>
   );

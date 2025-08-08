@@ -13,8 +13,9 @@ export default function Footer() {
     >
       <p style={{ margin: 0 }}>
         © {new Date().getFullYear()}  | Designed & Developed
-        by <span style={{ color: "#89d8e7be", fontWeight: "light" }}>Frimz Denver|| +233 552424591</span>
+        by <span style={{ color: "#89d8e7be", fontWeight: "light" }}>Frimz Denver</span>
       </p>
+      <p>+233 552424591</p>
     </footer>
   );
 }
