@@ -25,7 +25,7 @@ import BookSession1 from './BookSession1';
 
 function App() {
   return (
-    <Router basename="/surf">
+    <Router basename="/">
       <Routes>
         {/* ✅ Homepage route with Navbar */}
         <Route
