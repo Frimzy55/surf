@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/surf/static/css/main.6148f3d3.css",
-    "main.js": "/surf/static/js/main.6ccc67b2.js",
+    "main.css": "/surf/static/css/main.047346da.css",
+    "main.js": "/surf/static/js/main.253780ac.js",
     "static/js/453.1a16ed4e.chunk.js": "/surf/static/js/453.1a16ed4e.chunk.js",
     "static/media/surflogo1.png": "/surf/static/media/surflogo1.4688275746e6a1432261.png",
     "static/media/surf2.jpeg": "/surf/static/media/surf2.725459f87ce699eb96db.jpeg",
@@ -36,12 +36,12 @@
     "static/media/b.jpg": "/surf/static/media/b.45ac708da1b93f81f90b.jpg",
     "static/media/image4.jpeg": "/surf/static/media/image4.6f7c613f5708f0fc7b99.jpeg",
     "index.html": "/surf/index.html",
-    "main.6148f3d3.css.map": "/surf/static/css/main.6148f3d3.css.map",
-    "main.6ccc67b2.js.map": "/surf/static/js/main.6ccc67b2.js.map",
+    "main.047346da.css.map": "/surf/static/css/main.047346da.css.map",
+    "main.253780ac.js.map": "/surf/static/js/main.253780ac.js.map",
     "453.1a16ed4e.chunk.js.map": "/surf/static/js/453.1a16ed4e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6148f3d3.css",
-    "static/js/main.6ccc67b2.js"
+    "static/css/main.047346da.css",
+    "static/js/main.253780ac.js"
   ]
 }
