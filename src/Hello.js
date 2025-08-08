@@ -1,11 +1,11 @@
-import { useState, useEffect, useMemo, useCallback } from "react"; 
+import { useState, useEffect, useMemo, useCallback } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaInstagram, FaFacebookF, FaWhatsapp, FaYoutube, FaTripadvisor } from "react-icons/fa";
 
 import SurfHeading from "./SurfHeading";
 
-// Background images
+// Images
 import img1 from "./assets/image1.jpeg";
 import inter from "./assets/intermediate.jpeg";
 import img3 from "./assets/image3.jpeg";
@@ -20,6 +20,8 @@ import adv from "./assets/advanced.jpeg";
 import WhySurfing from "./WhySurfing";
 import BeginnerLessons from "./BeginnerLessons";
 import EquipmentInfo from "./EquipmentInfo";
+
+import "./Hello.css";
 
 function Hello() {
   const images = useMemo(() => [adv, img1, img3, img4, img7, n, ff, inter, im9], []);
@@ -45,97 +47,56 @@ function Hello() {
 
   return (
     <>
+      {/* Hero Section */}
       <div
         id="hello"
+        className="hero"
         style={{
           backgroundImage: `url(${images[currentIndex]})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          height: "100vh",
-          width: "100%",
-          margin: 0,
-          padding: 0,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          color: "white",
-          textShadow: "2px 2px 8px rgba(0,0,0,0.7)",
-          transition: "background-image 1s ease-in-out",
         }}
       >
         <SurfHeading />
 
         <button
           onClick={scrollToSection}
-          onMouseEnter={(e) => (e.target.style.backgroundColor = "#e68900")}
-          onMouseLeave={(e) => (e.target.style.backgroundColor = "#ff9800")}
-          style={{
-            marginTop: "20px",
-            padding: "12px 28px",
-            backgroundColor: "#ff9800",
-            color: "#fff",
-            border: "none",
-            borderRadius: "25px",
-            fontSize: "1.1rem",
-            fontWeight: "bold",
-            cursor: "pointer",
-            transition: "all 0.3s ease",
-          }}
+          className="learn-more-btn"
         >
           Learn More
         </button>
 
         {/* Social Media */}
-        <div className="text-center" style={{ marginTop: "30px" }}>
+        <div className="social-container">
           <h5 className="fw-bold mb-3">Follow Us</h5>
-          <div className="d-flex justify-content-center gap-4">
-            <a
-              href="https://www.facebook.com/share/15jiiB1rGk/?mibextid=wwXIfr"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          <div className="social-icons">
+            <a href="https://www.facebook.com/share/15jiiB1rGk/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
               <FaFacebookF size={30} color="#4267B2" />
             </a>
-            <a
-              href="https://www.instagram.com/loshes_surf_school/profilecard/?igsh=cHVlY29rZjFxZXd0"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.instagram.com/loshes_surf_school/profilecard/?igsh=cHVlY29rZjFxZXd0" target="_blank" rel="noopener noreferrer">
               <FaInstagram size={30} color="#C13584" />
             </a>
-            <a
-              href="https://wa.me/233256749130"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://wa.me/233256749130" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp size={30} color="#25D366" />
             </a>
-            <a
-              href="https://www.youtube.com/@EvansAbban-w9o"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.youtube.com/@EvansAbban-w9o" target="_blank" rel="noopener noreferrer">
               <FaYoutube size={30} color="#FF0000" />
             </a>
-            <a
-              href="https://www.tripadvisor.co.uk/Attraction_Review-g15228249-d27110371-Reviews-Loshe_s_Surf_Cape_Three_Points-Cape_Three_Points_Western_Region.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.tripadvisor.co.uk/Attraction_Review-g15228249-d27110371-Reviews-Loshe_s_Surf_Cape_Three_Points-Cape_Three_Points_Western_Region.html" target="_blank" rel="noopener noreferrer">
               <FaTripadvisor size={30} color="#34E0A1" />
             </a>
           </div>
         </div>
       </div>
 
-      {/* Page Sections */}
-      <div id="why-surfing">
+      {/* Content Sections */}
+      <section id="why-surfing" className="full-section">
         <WhySurfing />
-      </div>
-      <BeginnerLessons />
-      <EquipmentInfo />
+      </section>
+      <section className="full-section">
+        <BeginnerLessons />
+      </section>
+      <section className="full-section">
+        <EquipmentInfo />
+      </section>
     </>
   );
 }
