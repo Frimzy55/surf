@@ -22,6 +22,9 @@ import Advanced from './Advanced';
 import Missions from './Missions';
 import BookSession1 from './BookSession1';
 //import IntermediateBooking from "./IntermediateBooking"; // ✅ If you have it
+import GoogleReviews from './GoogleReviews';
+//import Reviews from './Reviews';
+
 
 function App() {
   return (
@@ -44,6 +47,8 @@ function App() {
               <Tour />
               <Yoga />
               <Contact />
+              
+              <GoogleReviews/>
               <Footer />
             </>
           }
