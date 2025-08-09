@@ -28,7 +28,7 @@ import GoogleReviews from './GoogleReviews';
 
 function App() {
   return (
-    <Router basename="/">
+    <Router basename="/surf">
       <Routes>
         {/* ✅ Homepage route with Navbar */}
         <Route
