@@ -15,21 +15,21 @@ export default function Team() {
       role: "Head Surf Instructor",
       img: evansImg,
       shortDesc: "Over 10 years of surfing experience...",
-      link: "/bio/evans",
+      link: "/evans",
     },
     {
       name: "Emmanuel Armstrong",
       role: "Intermediate Surf Coach",
       img: maryImg,
       shortDesc: "Certified intermediate instructor ",
-      link: "/bio/mary",
+      link: "/emmanuel",
     },
     {
       name: "Samuel Armanfo",
       role: "Surf Equipment Manager",
       img: johnImg,
       shortDesc: "Ensures high-quality surfboards...",
-      link: "/bio/john",
+      link: "/samuel",
     },
   ];
 

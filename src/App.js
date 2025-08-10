@@ -22,7 +22,7 @@ import Advanced from './Advanced';
 import Missions from './Missions';
 import BookSession1 from './BookSession1';
 //import IntermediateBooking from "./IntermediateBooking"; // ✅ If you have it
-import GoogleReviews from './GoogleReviews';
+//import GoogleReviews from './GoogleReviews';
 //import Reviews from './Reviews';
 
 
@@ -48,7 +48,7 @@ function App() {
               <Yoga />
               <Contact />
               
-              <GoogleReviews/>
+              
               <Footer />
             </>
           }
@@ -61,9 +61,9 @@ function App() {
          <Route path="/booking" element={<><BookSession1 /></>} />
         
 
-        <Route path="/bio/evans" element={<><EvansBio /></>} />
-        <Route path="/bio/mary" element={<><MaryBio /></>} />
-        <Route path="/bio/john" element={<><JohnBio /></>} />
+        <Route path="/evans" element={<><EvansBio /></>} />
+        <Route path="/emmanuel" element={<><MaryBio /></>} />
+        <Route path="/samuel" element={<><JohnBio /></>} />
       </Routes>
     </Router>
   );
