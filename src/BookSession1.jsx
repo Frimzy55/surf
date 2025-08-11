@@ -90,7 +90,7 @@ export default function BookSession() {
         }}
       >
         <p><FaPhoneAlt style={{ marginRight: "8px" }} /> +233 25 674 9130</p>
-        <p><FaEnvelope style={{ marginRight: "8px" }} /> loshesurfschool@gmail.com</p>
+        <p><FaEnvelope style={{ marginRight: "8px" }} /> abbanevans100@gmail.com</p>
         <p><FaMapMarkerAlt style={{ marginRight: "8px" }} /> Cape 3 Points, Ecolodge, Ghana</p>
       </div>
 
